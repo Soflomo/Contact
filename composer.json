@@ -20,7 +20,7 @@
         "zendframework/zendframework": "~2.1",
         "doctrine/doctrine-orm-module": "~0.7",
         "zf-commons/zfc-admin": "~0.1",
-        "soflomo/common": "~0.4",
+        "soflomo/common": "~0.4"
     },
     "autoload": {
         "psr-0": {
