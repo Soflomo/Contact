@@ -1,0 +1,66 @@
+<?php
+/**
+ * Contact page
+ */
+
+$this->headTitle()->set('Contact');
+?>
+
+<div class="block-image" style="background-image: url('/images/header/contact.jpg');"></div>
+
+<div class="row">
+    <div class="medium-10 medium-centered columns block-title">
+        <div class="block-padding fill">
+            <div class="row">
+                <div class="large-10 large-centered columns">
+                    <h1>Contact Dr. Monk</h1>
+                    <p>There’s a whole new world to discover. Contact us if you would like to find out more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+    <div class="row">
+        <div class="medium-10 medium-centered columns">
+            <div class="small-padding">
+                <h2>Contact details</h2>
+                <p>Are we connected on <a href="https://www.facebook.com/pages/Dr-Monk/278318852355654?ref=hl">Facebook</a>? If not, hop on over, hit the like button and introduce yourself! We can't wait to meet you</p>
+            </div>
+            <div class="row">
+                <div class="small-padding">
+                    <div class="large-6 columns">
+                        <h2>Address</h2>
+
+                        <h4>Dr. Monk in Africa</h4>
+                        <p>Frema Avenue 13<br>
+                        University of Ghana PO Box 12<br>
+                        West Legon Accra<br>
+                        Ghana<br>
+                        <a href="tel:+233246550690">+23 324 655 0690</a> (ask for Ama)</p>
+
+                        <h4>Dr. Monk in Europe</h4>
+                        <p>Leliegracht 34<br>
+                        1015 DG Amsterdam<br>
+                        The Netherlands<br>
+                        <a href="tel:+31652174765">+31 652 174 765</a> (ask for Lynn)</p>
+                    </div>
+
+                    <div class="large-6 columns">
+                        <h2>Dr. Monk hello box</h2>
+                        <?= $this->form()->openTag($form)?>
+                            <?= $this->formRow($form->get('name'))?>
+                            <?= $this->formRow($form->get('email'))?>
+                            <?= $this->formRow($form->get('subject'))?>
+                            <?= $this->formRow($form->get('message')->setAttributes(['rows'=> 10, 'cols' => 40]))?>
+
+                            <button type="submit">Send to Dr. Monk</button>
+                        <?= $this->form()->closeTag()?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

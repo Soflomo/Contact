@@ -1,0 +1,12 @@
+<p>Hello Monkeys, we've got mail!</p>
+
+<p><?= $this->escapeHtml($name)?> just sent a message about "<?= $this->escapeHtml($subject)?>" with the following content:</p>
+
+<blockquote>
+<?= nl2br($this->escapeHtml($message)) ?>
+</blockquote>
+
+<p>If you like to get in touch, just hit "Reply" or send a message back to <?= $this->escapeHtml($email)?>.</p>
+
+<p>Have a nice day, all best and enjoy you work!<br>
+<em>Dr. Monk</em></p>
