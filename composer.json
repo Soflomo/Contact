@@ -1,0 +1,33 @@
+{
+    "name": "soflomo/contact",
+    "description": "Contact form module for Ensemble",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "zf2",
+        "contact"
+    ],
+    "homepage": "https://github.com/Soflomo/Contact",
+    "authors": [
+        {
+            "name": "Jurian Sluiman",
+            "email": "jurian@soflomo.com",
+            "homepage": "http://soflomo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3.",
+        "zendframework/zendframework": "~2.1",
+        "doctrine/doctrine-orm-module": "~0.7",
+        "zf-commons/zfc-admin": "~0.1",
+        "soflomo/common": "~0.4",
+    },
+    "autoload": {
+        "psr-0": {
+            "Soflomo\\Contact": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
