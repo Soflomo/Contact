@@ -63,13 +63,13 @@ class ContactService
             $subject = $options->getSubject();
         }
 
-        $messageOptions = [
+        $messageOptions = array(
           'to'            => $options->getToAddress(),
           'to_name'       => $options->getToName(),
           'subject'       => $subject,
           'template'      => $options->getEmailTemplateHtml(),
           //'template_text' => $options->getEmailTemplateText(),
-        ];
+        );
 
         $this->getMailService()->send($messageOptions, $data);
     }

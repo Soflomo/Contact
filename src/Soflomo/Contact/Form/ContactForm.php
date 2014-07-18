@@ -49,41 +49,41 @@ class ContactForm extends Form implements InputProviderInterface
     {
         parent::__construct($name);
 
-        $this->add([
+        $this->add(array(
             'name'    => 'name',
-            'options' => [
+            'options' => array(
                 'label' => 'Name',
-            ],
-        ]);
+            ),
+        ));
 
-        $this->add([
+        $this->add(array(
             'name'    => 'email',
-            'options' => [
+            'options' => array(
                 'label' => 'E-mail address',
-            ],
-        ]);
+            ),
+        ));
 
-        $this->add([
+        $this->add(array(
             'type'    => 'textarea',
             'name'    => 'message',
-            'options' => [
+            'options' => array(
                 'label' => 'Message',
-            ],
-        ]);
+            ),
+        ));
     }
 
     public function getInputSpecification()
     {
-        return [
-            'name' => [
+        return array(
+            'name' => array(
                 'required' => true,
-            ],
-            'email' => [
+            ),
+            'email' => array(
                 'required' => true,
-            ],
-            'message' => [
+            ),
+            'message' => array(
                 'required' => true,
-            ],
-        ];
+            ),
+        );
     }
 }

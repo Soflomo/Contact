@@ -81,7 +81,7 @@ class ContactController extends AbstractActionController
             }
         }
 
-        $model = new ViewModel(['form' => $form]);
+        $model = new ViewModel(array('form' => $form));
         if (null !== $contact->getTemplate()) {
             $model->setTemplate($contact->getTemplate());
         }

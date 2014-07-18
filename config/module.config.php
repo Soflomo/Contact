@@ -1,78 +1,78 @@
 <?php
 
-return [
-    'soflomo_contact' => [
+return array(
+    'soflomo_contact' => array(
         'to_address'   => null,
         'to_name'      => null,
 
         'subject'             => 'New message: %s',
         'email_template_html' => 'soflomo-contact/email/html',
         'email_template_text' => 'soflomo-contact/email/text',
-    ],
+    ),
 
-    'ensemble_kernel' => [
-        'routes' => [
-            'contact' => [
-                'options' => [
-                    'defaults' => [
+    'ensemble_kernel' => array(
+        'routes' => array(
+            'contact' => array(
+                'options' => array(
+                    'defaults' => array(
                         'controller' => 'Soflomo\Contact\Controller\ContactController',
                         'action'     => 'index',
-                    ],
-                ],
-            ],
-        ],
-    ],
+                    ),
+                ),
+            ),
+        ),
+    ),
 
-    'ensemble_admin' => [
-        'routes' => [
-            'contact' => [
-                'contact' => [
+    'ensemble_admin' => array(
+        'routes' => array(
+            'contact' => array(
+                'contact' => array(
                     'type' => 'literal',
-                    'options' => [
+                    'options' => array(
                         'route' => '/',
-                        'defaults' => [
+                        'defaults' => array(
                             'controller' => 'Soflomo\ContactAdmin\Controller\ContactController',
                             'action'     => 'edit'
-                        ],
-                    ],
-                ],
-            ],
-        ],
-    ],
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
 
-    'service_manager' => [
-        'invokables' => [
+    'service_manager' => array(
+        'invokables' => array(
             'Soflomo\Contact\Form\ContactForm'       => 'Soflomo\Contact\Form\ContactForm',
-        ],
-        'factories' => [
+        ),
+        'factories' => array(
             'Soflomo\Contact\Options\ModuleOptions'  => 'Soflomo\Contact\Factory\ModuleOptionsFactory',
             'Soflomo\Contact\Service\ContactService' => 'Soflomo\Contact\Factory\ContactServiceFactory',
-        ],
-    ],
+        ),
+    ),
 
-    'controllers' => [
-        'factories' => [
+    'controllers' => array(
+        'factories' => array(
             'Soflomo\Contact\Controller\ContactController' => 'Soflomo\Contact\Factory\ContactControllerFactory',
-        ],
-    ],
+        ),
+    ),
 
-    'view_manager' => [
-        'template_path_stack' => [
+    'view_manager' => array(
+        'template_path_stack' => array(
             __DIR__ . '/../view',
-        ],
-    ],
+        ),
+    ),
 
-    'doctrine' => [
-        'driver' => [
-            'soflomo_contact' => [
+    'doctrine' => array(
+        'driver' => array(
+            'soflomo_contact' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
                 'paths' => __DIR__ . '/mapping'
-            ],
-            'orm_default' => [
-                'drivers' => [
+            ),
+            'orm_default' => array(
+                'drivers' => array(
                     'Soflomo\Contact\Entity' => 'soflomo_contact'
-                ],
-            ],
-        ],
-    ],
-];
+                ),
+            ),
+        ),
+    ),
+);
