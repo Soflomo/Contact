@@ -38,7 +38,7 @@
  * @link        http://soflomo.com
  */
 
-namespace soflomo\contact;
+namespace Soflomo\Contact;
 
 use Soflomo\Common\View\InjectTemplateListener;
 
