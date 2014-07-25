@@ -66,6 +66,8 @@ class ContactService
         $messageOptions = array(
           'to'            => $options->getToAddress(),
           'to_name'       => $options->getToName(),
+          'reply_to'      => $data['email'],
+          'reply_to_name' => $data['name'],
           'subject'       => $subject,
           'template'      => $options->getEmailTemplateHtml(),
           //'template_text' => $options->getEmailTemplateText(),
