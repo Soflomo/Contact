@@ -23,23 +23,6 @@ return array(
         ),
     ),
 
-    'ensemble_admin' => array(
-        'routes' => array(
-            'contact' => array(
-                'contact' => array(
-                    'type' => 'literal',
-                    'options' => array(
-                        'route' => '/',
-                        'defaults' => array(
-                            'controller' => 'Soflomo\ContactAdmin\Controller\ContactController',
-                            'action'     => 'edit'
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    ),
-
     'service_manager' => array(
         'invokables' => array(
             'Soflomo\Contact\Form\ContactForm'       => 'Soflomo\Contact\Form\ContactForm',
